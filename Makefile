@@ -1,3 +1,5 @@
+# Clone and build https://github.com/google/benchmark to ..
+
 mandelbrot:
 	g++ Mandelbrot.cpp -std=c++2a -isystem ../benchmark/include -L../benchmark/build/src -lbenchmark -lpthread -o BenchGccVec -O2 -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -ffast-math -fno-finite-math-only -Wall -ftree-vectorize -fopt-info-vec -fopt-info-vec-missed -Wpsabi
 	g++ Mandelbrot.cpp -std=c++2a -isystem ../benchmark/include -L../benchmark/build/src -lbenchmark -lpthread -o BenchGcc -O2 -mavx512f -mavx512cd -mavx512dq -mavx512bw -mavx512vl -ffast-math -fno-finite-math-only -Wall -Wpsabi -fno-tree-vectorize
